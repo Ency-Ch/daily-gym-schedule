@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" /> 
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<form  id = book-form>
+    <div>
+        <label for = 'week'>Select Week</label>
+        <input type ="date" id = "date" name = "week" class = 'u-full-width'>   
+    </div>
+    <div>
+        <label for = 'body-part'>Body Part</label>
+
+        <select id = 'body-area' class ='u-full-width'>
+            <option value = ''>---select---</option>
+            <option value = 'Legs' >Legs</option>
+            <option value = 'Arms' >Arms</option>
+            <option value = 'Chest'>Chest</option>
+            <option value = 'Back' >Back</option>
+            <option value = 'Cardio' >Cardio</option>
+            <option value = 'Legs + Arms' >Legs + Arms</option>
+            <option value = 'Chest + Arms' >Chest + Arms</option>  
+        </select>
+
+    </div>
+    <div class="work-outs" >
+        <label for = 'exercise'>Exercise</label>
+       <textarea class = 'u-full-width' id = 'exercise' maxlength = 100 cols = 8 ></textarea>
+        <!-- <input type = 'textarea' class = 'u-full-width' id = 'exercise'> -->
+    </div>
+    <div>
+       <span> <input type="submit" value="ADD" class="u-full-width" id = 'submit'> </span> 
+    </div>
+</form>
+
+
+    <div class='u-full-width'> 
+        <table class='u-full-width'>
+        <thead>
+            <tr>
+                <th>Week</th>
+                <th>Body Part</th>
+                <th>Exercise</th>
+                <th></th>
+            </tr>
+
+        </thead>
+        <tbody id = 'gym-list'></tbody>
+
+    </table>
+
+</div>
+   
+
+</div>
+   <script src = "app.js"></script>
+</body>
+</html>
